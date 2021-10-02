@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/minseo/CLionProjects/cppproject/cmake-build-debug/CMyString.cpp
+CMyString.h
+/Users/minseo/CLionProjects/cppproject/cmake-build-debug/CMyString.h
+string.h
+-
+iostream
+-
+
+/Users/minseo/CLionProjects/cppproject/cmake-build-debug/CMyString.h
+
+/Users/minseo/CLionProjects/cppproject/cmake-build-debug/StringSample1234.cpp
+iostream
+-
+CMyString.h
+/Users/minseo/CLionProjects/cppproject/cmake-build-debug/CMyString.h
+
