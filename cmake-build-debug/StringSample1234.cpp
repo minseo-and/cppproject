@@ -1,38 +1,42 @@
 #include <iostream>
-#include "CMyString.h"  // CMyString 클래스 사용을 위해 헤더파일 추가
+#include "CMyString.h"
+
 using namespace std;
-void TestFunc(const CMyString& param)
-{
-    cout << param.GetString() << endl;
-}
-int main()
-{
-    CMyString strData1;
 
-    cout << strData1.GetString() << endl;
-    strData1.Release();
-    cout << strData1.GetString() << endl;
+int main() {
+    int choose(0);
 
-    CMyString strData2;
-    strData2.SetString("Test Code 1");
-    cout << strData2.GetString() << endl;
-    strData2.Release();
+    int a, b;
+    cout << "학년 반 설정" << endl;
+    cout << "학년 : ";
+    cin >> a;
+    cout << "반 : ";
+    cin >> b;
+    CMyStringEx* List = new CMyStringEx(a, b);
 
-    CMyString strData3;
-    strData3.SetString("Test Code 2");
-    cout << strData3.GetString() << endl;
-    strData3.Release();
+    while (1) {
+        List->Menu();
+        cin >> choose;
 
-    strData3.SetString("");
-    strData3.SetString("Hello World");
-    strData3.SetString("Test Code 3");
-    cout << strData3.GetString() << endl;
-    strData3.Release();
-
-    strData3.SetString("Hello World");
-    TestFunc(strData3);
-    cout << strData3.GetString() << endl;
-    strData3.Release();
-
-    return 0;
+        switch (choose) {
+            case 0:
+                List->Unlock();
+                cout << "프로그램 종료" << endl;
+                return 0;
+            case 1:
+                List->Insert();
+                break;
+            case 2:
+                List->Print();
+                break;
+            case 3:
+                List->Delete();
+                break;
+            case 4:
+                List->GetInfo();
+                break;
+            default:
+                cout << "재입력 필요" << endl;
+        }
+    }
 }
