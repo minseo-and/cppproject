@@ -170,12 +170,11 @@ void CMyString::Print() const
         line();
         cout << " 번호 : " << tmp->_Num << endl;
         cout << " 국어 : " << tmp->_Korean << endl;
+        cout << " 영어 : " << tmp->_English << endl;
         cout << " 수학 : " << tmp->_Math << endl;
         cout << " 사회 : " << tmp->_Social << endl;
-        cout << " 과학 : " << tmp->_Science << endl;
-        cout << " 영어 : " << tmp->_English << endl;
-        cout << "전공1 : " << tmp->_Major1 << endl;
-        cout << "전공2 : " << tmp->_Major2 << endl;
+        cout << " 자료구조 : " << tmp->_Jaryogoojo << endl;
+        cout << " C++ : " << tmp->_Cpp << endl;
         tmp = tmp->Right;
     }
     return;
@@ -228,7 +227,7 @@ void Input(Node* N)
     cout << " 자료구조점수 : ";
     cin >> N->_Jaryogoojo;
 
-    cout << "C++점수 : ";
+    cout << " C++점수 : ";
     cin >> N->_Cpp;
 
     return;
