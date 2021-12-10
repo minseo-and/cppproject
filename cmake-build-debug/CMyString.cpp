@@ -10,11 +10,11 @@ CMyString::CMyString() {
     _Class = 0;
 }
 
-CMyString::CMyString(int g, int c) {
+CMyString::CMyString(int a, int b) {
     Head = nullptr;
     Tail = nullptr;
-    _Grade = g;
-    _Class = c;
+    _Grade = a;
+    _Class = b;
 }
 
 void CMyString::Menu()
@@ -209,7 +209,7 @@ void line() {
 
 void Input(Node* N)
 {
-    cout << "  번 호   : ";
+    cout << "  번호 : ";
     cin >> N->_Num;
 
     cout << " 국어점수 : ";
@@ -271,7 +271,7 @@ void CMyStringEx::GetInfo()
     cout << " 수학 평균 : " << Class_Average[2] / this->length << endl;
     cout << " 사회 평균 : " << Class_Average[3] / this->length << endl;
     cout << " 자료구조 평균 : " << Class_Average[4] / this->length << endl;
-    cout << "C++ 평균 : " << Class_Average[5] / this->length << endl;
+    cout << " C++ 평균 : " << Class_Average[5] / this->length << endl;
     return;
 }
 
