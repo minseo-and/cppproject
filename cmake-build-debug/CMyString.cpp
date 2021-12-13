@@ -412,6 +412,11 @@ void CMyStringEx::Delete()
 
 void CMyStringEx::Unlock()
 {
+    if  (this->length == 0) {
+        cout << "등록된 학생 없음" << endl;
+        return;
+    }
+
     Node* pre = this->Head;
     Node* temp = pre->Right;
     for(int i = 0; i < this->length; i++){
